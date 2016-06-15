@@ -20,6 +20,9 @@
 ##- 克隆远程仓库文件至本地仓库
 > git clone URL
 
+##- 将本地分支文件上传至github
+> git push -u origin master
+
 ##- 切换分支
 > git checkout **分支名**
 
