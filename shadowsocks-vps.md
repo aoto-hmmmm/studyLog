@@ -130,3 +130,14 @@ iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp --dport 80 -j A
 iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp --dport 443 -j ACCEPT
 iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp -j REJECT --reject-with tcp-reset
 ```
+###关于iptables规则保存
+http://salogs.com/news/2015/08/20/iptables-save/
+
+##java+tomcat
+###当有多个版本的java时，可进行切换
+```bash
+update-alternatives --config java
+update-alternatives --config javac
+```
+###关于tomcat只监听ipv6端口的解决方法:
+http://serverfault.com/questions/390840/how-does-one-get-tomcat-to-bind-to-ipv4-address
