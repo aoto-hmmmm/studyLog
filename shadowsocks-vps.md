@@ -75,7 +75,7 @@ do_start()
 }
 ```
 第二段
-```data
+```bash
 do_stop()
 {
     # Return
