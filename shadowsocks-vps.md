@@ -141,3 +141,5 @@ update-alternatives --config javac
 ```
 ###关于tomcat只监听ipv6端口的解决方法:
 http://serverfault.com/questions/390840/how-does-one-get-tomcat-to-bind-to-ipv4-address
+###bash脚本传参
+http://blog.sina.com.cn/s/blog_5133261f0100o4jk.html
