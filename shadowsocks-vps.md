@@ -112,3 +112,21 @@ do_stop()
 }
 ```
 改完之后即可用service命令一同管理
+
+##iptables防火墙管理
+https://gist.github.com/thomasfr/9712418
+
+##Securing Public Shadowsocks Server
+https://github.com/shadowsocks/shadowsocks/wiki/Securing-Public-Shadowsocks-Server
+其中wondershaper出现限速错误现象
+###denyhosts安装方法:
+https://github.com/denyhosts/denyhosts
+https://www.liberiangeek.net/2014/10/install-denyhosts-ubuntu-14-04-server/
+###对于http-ss用户，限制其不能访问80,443之外的端口
+```bash
+iptables -t filter -A OUTPUT -d 127.0.0.1 -j ACCEPT
+iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp --sport ssport -j ACCEPT
+iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp --dport 80 -j ACCEPT
+iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp --dport 443 -j ACCEPT
+iptables -t filter -m owner --uid-owner http-ss -A OUTPUT -p tcp -j REJECT --reject-with tcp-reset
+```
