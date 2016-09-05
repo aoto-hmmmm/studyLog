@@ -19,5 +19,6 @@ GROUP=YOURGROUP
 ```bash
 ss-server [option]
 /etc/init.d/shadowsocks-libev [start-status-stop-...]
+#修改默认启动文件后推荐使用这一种
 service shadowsocks-libev [start-status-stop-...]
 ```
